@@ -1,0 +1,685 @@
+/* Temel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.title {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.buttons .btn {
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.buttons .btn:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+}
+
+.purpose {
+    text-align: center;
+    max-width: 800px;
+    margin-top: 40px;
+    padding: 20px;
+    animation: slideIn 1s ease-out;
+}
+
+.purpose h2 {
+    font-size: 1.8em;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.purpose p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Geçiş Efekti */
+a {
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #74ebd5;
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); opacity: 0.5; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(-3deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
+    75% { transform: rotate(3deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Eklenen Animasyonlar */
+.title {
+    animation: bounce 2s infinite;
+}
+
+.subtitle {
+    animation: fadeIn 2s ease;
+}
+
+.scale:hover {
+    animation: scaleUp 0.4s ease forwards;
+}
+
+.slideIn {
+    animation: slideIn 1s ease;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2em;
+    }
+    .buttons .btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    .purpose {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+/* Profil Stil ve Animasyon */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Profil Kart Arka Plan Stili */
+.profile {
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+    background: #f0f4f8; /* Soft pastel arka plan */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+    background-color: #eaf0f7; /* Hover sırasında daha açık pastel ton */
+}
+
+.profile h2 {
+    color: #333; /* Başlık rengi */
+}
+
+.profile p {
+    color: #555; /* Yazı rengi */
+    line-height: 1.6;
+}
+
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.fadeInLeft {
+    animation: fadeInLeft 1s ease-out;
+}
+
+.fadeInRight {
+    animation: fadeInRight 1s ease-out;
+}
+
+
+/* Ana Sayfa Butonu Stili */
+.btn {
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-5px);
+}
+
+.header .btn {
+    margin-top: 20px;
+}
+
+
+
+/* İletişim Bölümü Stilleri */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-card {
+    text-align: center;
+    background-color: #f0f4f8; /* Sayfanın arka plan rengi ile uyumlu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    transition: transform 0.3s, background-color 0.3s; /* Animasyon */
+}
+
+.contact-card:hover {
+    transform: scale(1.05); /* Kart büyüme efekti */
+    background-color: #eaf0f7; /* Hover sırasında renk değişimi */
+}
+
+.contact-card h2 {
+    color: #333;
+}
+
+.contact-link {
+    font-size: 1.1em;
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #005f99; /* Link hover renk değişimi */
+}
+
+
+
+
+/* Genel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Projeler Sayfası - Ana Menü */
+#projects-header {
+    background-color: #4CAF50; /* Menü arka plan rengi */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#projects-header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#projects-header nav ul li {
+    margin: 0 15px;
+}
+
+#projects-header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+#projects-header nav ul li a:hover, 
+#projects-header nav ul li a.active {
+    background-color: #45a049; /* Aktif ve hover durumunda renk değişimi */
+    border-radius: 5px;
+}
+
+/* Başlık ve Alt Yazı */
+#projects-header h1 {
+    margin-top: 20px;
+    font-size: 32px;
+}
+
+#projects-header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Proje Kartları */
+#projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #f4f4f4; /* Arka plan rengi */
+}
+
+.project-card {
+    background-color: white;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Hover animasyonu */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.project-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.project-card p + h3 {
+    margin-top: 20px;
+}
+
+/* Footer */
+/* Footer Stil Ayarları */
+.footer {
+    background-color: #4CAF50; /* Yeşil arka plan */
+    color: #fff; /* Beyaz yazı rengi */
+    text-align: center; /* Yazıyı ortala */
+    padding: 10px 0; /* Üst ve alt boşluk */
+    font-size: 1em; /* Yazı boyutu */
+    position: fixed; /* Sayfanın alt kısmında sabit */
+    width: 100%; /* Genişliği sayfanın tamamı */
+    bottom: 0; /* Sayfanın en alt kısmında konumlandır */
+}
+
+/* Telif hakkı sembolü ve yazı stil ayarları */
+.footer p {
+    margin: 0; /* Varsayılan boşlukları kaldır */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+}
+
+/* Mobil uyum için proje kartları */
+@media (max-width: 768px) {
+    #projects-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%; /* Mobilde kart genişliğini küçültme */
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+/* Ortak Menü ve Buton Stili */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Buton Stili */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a73e8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Buton Hover ve Aktif Durumu */
+.button:hover {
+    background-color: #0d47a1;
+    transform: scale(1.05);
+}
+
+.nav-link.active {
+    background-color: #0d47a1;
+}
+
+/* Aktif Sayfa Butonu */
+.button.active {
+    background-color: #0d47a1;
+    cursor: default;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+
+
+
+/* Project Cards Container */
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project Card Stil Ayarları */
+.project-card {
+    width: 80%;
+    max-width: 900px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    opacity: 0; /* Animasyon için başlangıçta görünmez */
+    transform: translateX(-100px) scale(0.9); /* Animasyon başlangıç noktası */
+    animation: slideIn 0.8s forwards; /* Animasyon */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Efekti - Kart Üzerine Gelindiğinde */
+.project-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Kart Animasyon Efekti */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) scale(0.9); /* Soldan başlar ve küçük olur */
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(10px) scale(1.02); /* Hafif bir büyüme ve sağa kayma efekti */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1); /* Normal pozisyon ve boyut */
+    }
+}
+
+/* Kart Başlığı Stil Ayarları */
+.project-card h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Kart Açıklama Yazıları */
+.project-card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Nasıl Çalışır Başlığı */
+.project-card h3 {
+    font-size: 1.2em;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .project-card {
+        width: 95%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Genel ayarlar */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.animated-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px;
+}
+
+/* Kart stilini büyüttük ve animasyon ekledik */
+.card {
+    position: relative;
+    width: 600px; /* Kart genişliğini büyüttük */
+    height: 500px; /* Kart yüksekliği büyüttük */
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmi karta sığdır */
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Kartların yukarıdan kayan animasyonu */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card h2 {
+    position: absolute;
+    top: -20px; /* Başlangıç konumu */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Başlık için arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 2; /* Başlığı üst katmanda gösterir */
+    transition: top 0.3s ease; /* Hareket animasyonu */
+}
+
+.card:hover h2 {
+    top: 10px; /* Kart üzerine gelince başlığın konumunu değiştirir */
+}
